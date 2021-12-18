@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #mydiv {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            margin-top: -50px;
+            margin-left: -100px;
+            text-align: center;
+
+        }
+    </style>
+</head>
+
+<body>
+    <div id="mydiv">
+        <table>
+            <tr>
+                <th>Name</th>
+                <th>Qualification</th>
+                <th>Place</th>
+            </tr>
+            <tbody class="tabledata" id="tabledata">
+                <tr>
+                    <td>Satyam</td>
+                    <td>B.E</td>
+                    <td>Surat</td>
+                </tr>
+                <tr>
+                    <td>Romil</td>
+                    <td>B.Com</td>
+                    <td>Vadodara</td>
+                </tr>
+                <tr>
+                    <td>Maulik</td>
+                    <td>I.T</td>
+                    <td>Surat</td>
+                </tr>
+                <tr>
+                    <td>Harshal</td>
+                    <td>B.Arch</td>
+                    <td>Mumbai</td>
+                </tr>
+
+            </tbody>
+        </table>
+        <button class="reset">Reset</button>
+    </div>
+</body>
+<script>
+    var classname = document.getElementsByClassName("reset");
+    var p = document.getElementById("tabledata");
+
+    var myFunction = function () {
+        p.style.display = 'none';
+    };
+
+    for (var i = 0; i < classname.length; i++) {
+        classname[i].addEventListener('click', myFunction, false);
+    }
+</script>
+
+</html>
